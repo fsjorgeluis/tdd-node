@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 const postsHandlers = posts({ axios });
+
 app.post('/', authenticate, postsHandlers.post);
 
 app.listen(port, () => console.log(`Example app listen on port ${port}!`));

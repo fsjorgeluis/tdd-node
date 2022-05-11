@@ -4,7 +4,7 @@ describe('Middlewares', () => {
 	describe('authenticate', () => {
 		it('should have id 1', () => {
 			const req = {
-				header: jest.fn().mockReturnValue(1),
+				header: jest.fn().mockReturnValue('1'),
 			};
 			const res = {
 				sendStatus: jest.fn(), //return 403 if not valid
@@ -20,7 +20,7 @@ describe('Middlewares', () => {
 
 		it('should fail if user dont have id 1', () => {
 			const req = {
-				header: jest.fn().mockReturnValue(2),
+				header: jest.fn().mockReturnValue('2'),
 			};
 			const res = {
 				sendStatus: jest.fn(), //return 403 if not valid

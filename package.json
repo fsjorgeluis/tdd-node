@@ -1,0 +1,17 @@
+{
+	"name": "tdd-node",
+	"version": "0.0.1",
+	"description": "a little blog sample",
+	"main": "server.js",
+	"repository": "https://github.com/fsjorgeluis/tdd-node.git",
+	"author": "Jorge Fernandez",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"express": "^4.18.1"
+	},
+	"devDependencies": {
+		"@types/jest": "^27.5.0",
+		"jest": "^28.1.0"
+	}
+}

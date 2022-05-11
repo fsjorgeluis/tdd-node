@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "node server.js",
-		"test": "jest --watchAll"
+		"test": "jest"
 	},
 	"dependencies": {
 		"axios": "^0.27.2",
@@ -16,6 +16,7 @@
 	},
 	"devDependencies": {
 		"@types/jest": "^27.5.0",
-		"jest": "^28.1.0"
+		"jest": "^28.1.0",
+		"supertest": "^6.2.3"
 	}
 }

@@ -1,6 +1,6 @@
 const express = require('express');
-const axios = require('axios');
 
+const services = require('./src/services');
 const { authenticate } = require('./src/middlewares');
 const { posts } = require('./src/endpoints');
 
@@ -13,8 +13,10 @@ app.use(express.urlencoded({ extended: false }));
 // parse application/json
 app.use(express.json());
 
-const postsHandlers = posts({ axios });
+const postsHandlers = posts(services);
 
 app.post('/', authenticate, postsHandlers.post);
 
 app.listen(port, () => console.log(`Example app listen on port ${port}!`));
+
+module.exports = app;
